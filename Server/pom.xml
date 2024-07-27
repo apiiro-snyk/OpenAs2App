@@ -62,16 +62,14 @@
                                     <fileset dir="${project.basedir}/src/resources"/>
                                 </copy>
                                 <!--Copy artifact to build lib dicetory -->
-                                <copy file="${project.build.directory}/${project.build.finalName}.jar"
-                                      todir="${project.build.directory}/dist/lib" verbose="true"/>
+                                <copy file="${project.build.directory}/${project.build.finalName}.jar" todir="${project.build.directory}/dist/lib" verbose="true"/>
                                 <!-- Add the help PDF version to the distro -->
                                 <copy file="${help.file.src}" todir="${project.build.directory}/dist" verbose="true"/>
                                 <!-- Add the release notes files -->
                                 <copy file="${release.notes}" todir="${project.build.directory}/dist" verbose="true"/>
                                 <copy file="${release.history}" todir="${project.build.directory}/dist" verbose="true"/>
                                 <!-- create distribution package -->
-                                <zip destfile="${project.basedir}/dist/${project.dist.package.name}"
-                                     basedir="${project.build.directory}/dist"/>
+                                <zip destfile="${project.basedir}/dist/${project.dist.package.name}" basedir="${project.build.directory}/dist"/>
                             </target>
                         </configuration>
                     </execution>
@@ -163,7 +161,7 @@
         <dependency>
             <groupId>io.sentry</groupId>
             <artifactId>sentry</artifactId>
-            <version>1.2.2</version>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
 </project>
